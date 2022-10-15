@@ -2,22 +2,25 @@
 
 
 /**
- * Question 2 for lab 2.
+ * Question 1 for lab 2.
  */
+
+float b = 2.5;
+
 int main(void)
 {
 	WDTCTL = WDTPW | WDTHOLD;	// stop watchdog timer
 	
-	int a = 0b1000110001011111;
-	int b = 0b1100001000100110;
+	int a = 1;
+	a += 1;
+	b -= 1;
 
-	int c = sum(a,b);
+	unsigned char c = 0x0005;
+	unsigned char d = 0x0007;
+	unsigned char e = c & d;
+	unsigned char f = d | c;
 
 	while(1);
-	return 0;
-}
 
-int sum(int num1, int num2)
-{
-    return num1 + num2;
+	return 0;
 }
